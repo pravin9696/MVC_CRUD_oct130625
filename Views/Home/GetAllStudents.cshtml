@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVC_CRUD_oct130625.Models.tblStudent>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAllStudents</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Roll Number</td>
+                <td>Name of Student</td>
+                <td>Total Marks</td>
+                <td>Date of Birth</td>
+                <td>Fees Paid</td>
+            </tr>
+            @foreach (var std in Model)
+            {
+               
+
+  ;
+                <tr>
+                    <td>@std.ID</td>
+                    <td>@std.RollNo</td>
+                    <td>@std.Name</td>
+                    <td>@std.TotalMarks</td>
+                    <td>@std.DOB</td>
+                    <td>@std.FeesPaid</td>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+</body>
+</html>

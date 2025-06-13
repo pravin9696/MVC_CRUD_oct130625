@@ -1,0 +1,48 @@
+﻿@model MVC_CRUD_oct130625.Models.tblStudent 
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudent</title>
+</head>
+<body>
+    <h3>@ViewBag.msg</h3>
+    <div> 
+        @using (Html.BeginForm("AddStudent","Home",FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(x => x.RollNo)</td>
+                    <td>@Html.TextBoxFor(x => x.RollNo)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(x => x.Name)</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(x => x.TotalMarks)</td>
+                    <td>@Html.TextBoxFor(x => x.TotalMarks)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(x => x.DOB)</td>
+                    <td>@Html.TextBoxFor(x => x.DOB)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(x => x.FeesPaid)</td>
+                    <td>@Html.TextBoxFor(x => x.FeesPaid)</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save" /></td>
+                    
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

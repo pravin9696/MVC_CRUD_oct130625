@@ -1,0 +1,60 @@
+﻿@model MVC_CRUD_oct130625.Models.tblUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddUser</title>
+</head>
+<body>
+    <h3>Add User</h3>
+    <div> 
+        @using (Html.BeginForm("AddUSer","User",FormMethod.Post))
+        {
+
+      
+        <table>
+            <tr>
+                <td>Enter Name</td>
+                <td>@Html.TextBoxFor(x => x.UserName)</td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td>@Html.PasswordFor(x => x.Password)</td>
+            </tr>
+            <tr>
+                <td>Enter Address</td>
+                <td>@Html.TextAreaFor(x => x.Address)</td>
+            </tr>
+            <tr>
+                <td>Enter Games</td>
+                <td>
+                    @Html.CheckBoxFor(x => x.GameHockey)<span>Hockey</span><br />
+                    @Html.CheckBoxFor(x => x.GameFootBall)<span>FootBall</span><br />
+                    @Html.CheckBoxFor(x => x.GameCricket)<span>Cricket</span><br />
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    @Html.RadioButtonFor(x => x.Gender, "Male")<span>Male</span><br />
+                    @Html.RadioButtonFor(x => x.Gender, "Female")<span>Female</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Age</td>
+                <td>@Html.DropDownListFor(x=>x.Age,new SelectList(@ViewBag.AgeList),"--Select Age --") </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Add User" /><input type="reset" value="Reset" /></td>
+            </tr>
+        </table>
+        <h3>@ViewBag.msg</h3>
+        }
+    </div>
+</body>
+</html>

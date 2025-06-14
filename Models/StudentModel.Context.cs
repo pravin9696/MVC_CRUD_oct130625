@@ -26,5 +26,6 @@ namespace MVC_CRUD_oct130625.Models
         }
     
         public virtual DbSet<tblStudent> tblStudents { get; set; }
+        public virtual DbSet<tblUser> tblUsers { get; set; }
     }
 }

@@ -12,13 +12,16 @@ namespace MVC_CRUD_oct130625.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblStudent
+    public partial class tblUser
     {
-        public int ID { get; set; }
-        public Nullable<int> RollNo { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> TotalMarks { get; set; }
-        public Nullable<System.DateTime> DOB { get; set; }
-        public Nullable<double> FeesPaid { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Address { get; set; }
+        public bool GameHockey { get; set; }
+        public bool GameFootBall { get; set; }
+        public bool GameCricket { get; set; }
+        public string Gender { get; set; }
+        public int Age { get; set; }
     }
 }

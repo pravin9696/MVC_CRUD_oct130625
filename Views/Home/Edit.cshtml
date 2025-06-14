@@ -1,0 +1,49 @@
+﻿@model MVC_CRUD_oct130625.Models.tblStudent
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+        {
+
+
+            <table>
+                <tr>
+                    <td>Roll Number</td>
+                    <td>@Html.TextBoxFor(x => x.RollNo)</td>
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>Total Marks</td>
+                    <td>@Html.TextBoxFor(x => x.TotalMarks)</td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>@Html.TextBoxFor(x => x.DOB)</td>
+                </tr>
+                <tr>
+                    <td>Total Fees Paind</td>
+                    <td>@Html.TextBoxFor(x => x.FeesPaid)</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="submit" value="Edit" /><input type="reset" value="Reset" /></td>
+                </tr>
+            </table>
+            <h3>@ViewBag.msg</h3>
+        }
+    </div>
+</body>
+</html>

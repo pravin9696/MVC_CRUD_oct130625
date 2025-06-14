@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchStudent</title>
+</head>
+<body>
+    <div>
+        <h3>Search Student Record To Edit</h3>
+        @using (Html.BeginForm("Edit", "Home", FormMethod.Get))
+        {
+
+
+            <table>
+                <tr>
+                    <td>Enter Roll Number to Search Record</td>
+                    <td>@Html.TextBox("txtRoll")</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Search" /></td>
+                </tr>
+                </table>
+                <h3>@ViewBag.msg</h3>
+        }
+        </div>
+</body>
+</html>

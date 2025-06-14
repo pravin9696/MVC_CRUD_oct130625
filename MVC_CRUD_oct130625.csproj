@@ -100,6 +100,7 @@
     <Content Include="Global.asax" />
     <Content Include="Models\DB image\DB image oct MVC.png" />
     <Content Include="Models\DB image\Oct DBScript.sql" />
+    <Content Include="Models\DB image\User Form for CRUD.jpg" />
     <Content Include="Models\StudentModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StudentModel.edmx</DependentUpon>
